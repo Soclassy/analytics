@@ -5,10 +5,11 @@ from multiprocessing import Pool
 
 start_time = time.time()
 
-wb = openpyxl.load_workbook(filename = 'C:/Users/cnxxd/PycharmProjects/task2/time intervals (practice).xlsx')
+wb = openpyxl.load_workbook(filename = 'time intervals (practice).xlsx')
 sheet = wb['Лист2']
 
 sessions = {}
+
 for i in range(2, 41523):
     sessions[i] = None
 
@@ -150,7 +151,7 @@ def time_begin_end(wb, list_values_end_dict):
         _ = ws2.cell(column=2, row=3469, value=f'{list_values_end_dict[41522]//3600}:{list_values_end_dict[41522]//60%60}:{list_values_end_dict[41522]%60}')
     for row in range(2, 3470):
         _ = ws2.cell(column=4, row=row, value='06.06.2022')
-    wb.save(filename = 'C:/Users/cnxxd/PycharmProjects/task2/time intervals (practice).xlsx')
+    wb.save(filename = 'time intervals (practice).xlsx')
 
 
 
